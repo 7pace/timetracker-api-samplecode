@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 06.12.2016 11:33:42
+// Generation date: 16.03.2017 14:59:19
 namespace TimetrackerOnline.BusinessLayer.Models
 {
     /// <summary>
@@ -73,6 +73,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
             return exportItemViewModelApi;
         }
         /// <summary>
+        /// There are no comments for Property CompletedWork in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Completed Work")]
+        public global::System.Nullable<double> CompletedWork
+        {
+            get
+            {
+                return this._CompletedWork;
+            }
+            set
+            {
+                this.OnCompletedWorkChanging(value);
+                this._CompletedWork = value;
+                this.OnCompletedWorkChanged();
+                this.OnPropertyChanged("CompletedWork");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _CompletedWork;
+        partial void OnCompletedWorkChanging(global::System.Nullable<double> value);
+        partial void OnCompletedWorkChanged();
+        /// <summary>
         /// There are no comments for Property IterationID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
@@ -95,6 +118,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
         private global::System.Nullable<int> _IterationID;
         partial void OnIterationIDChanging(global::System.Nullable<int> value);
         partial void OnIterationIDChanged();
+        /// <summary>
+        /// There are no comments for Property Effort in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Effort")]
+        public global::System.Nullable<double> Effort
+        {
+            get
+            {
+                return this._Effort;
+            }
+            set
+            {
+                this.OnEffortChanging(value);
+                this._Effort = value;
+                this.OnEffortChanged();
+                this.OnPropertyChanged("Effort");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _Effort;
+        partial void OnEffortChanging(global::System.Nullable<double> value);
+        partial void OnEffortChanged();
         /// <summary>
         /// There are no comments for Property TopTFSID in the schema.
         /// </summary>
@@ -141,6 +187,52 @@ namespace TimetrackerOnline.BusinessLayer.Models
         private global::System.Nullable<double> _TopTFSStoryPoint;
         partial void OnTopTFSStoryPointChanging(global::System.Nullable<double> value);
         partial void OnTopTFSStoryPointChanged();
+        /// <summary>
+        /// There are no comments for Property OriginalEstimate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Original Estimate")]
+        public global::System.Nullable<double> OriginalEstimate
+        {
+            get
+            {
+                return this._OriginalEstimate;
+            }
+            set
+            {
+                this.OnOriginalEstimateChanging(value);
+                this._OriginalEstimate = value;
+                this.OnOriginalEstimateChanged();
+                this.OnPropertyChanged("OriginalEstimate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _OriginalEstimate;
+        partial void OnOriginalEstimateChanging(global::System.Nullable<double> value);
+        partial void OnOriginalEstimateChanged();
+        /// <summary>
+        /// There are no comments for Property StoryPoints in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Story Points")]
+        public global::System.Nullable<double> StoryPoints
+        {
+            get
+            {
+                return this._StoryPoints;
+            }
+            set
+            {
+                this.OnStoryPointsChanging(value);
+                this._StoryPoints = value;
+                this.OnStoryPointsChanged();
+                this.OnPropertyChanged("StoryPoints");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _StoryPoints;
+        partial void OnStoryPointsChanging(global::System.Nullable<double> value);
+        partial void OnStoryPointsChanged();
         /// <summary>
         /// There are no comments for Property TimeTracked in the schema.
         /// </summary>
@@ -325,29 +417,6 @@ namespace TimetrackerOnline.BusinessLayer.Models
         private string _WorkItemState;
         partial void OnWorkItemStateChanging(string value);
         partial void OnWorkItemStateChanged();
-        /// <summary>
-        /// There are no comments for Property ProjectName in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Project Name")]
-        public string ProjectName
-        {
-            get
-            {
-                return this._ProjectName;
-            }
-            set
-            {
-                this.OnProjectNameChanging(value);
-                this._ProjectName = value;
-                this.OnProjectNameChanged();
-                this.OnPropertyChanged("ProjectName");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _ProjectName;
-        partial void OnProjectNameChanging(string value);
-        partial void OnProjectNameChanged();
         /// <summary>
         /// There are no comments for Property Comment in the schema.
         /// </summary>
@@ -555,6 +624,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
         private global::System.Nullable<global::System.DateTimeOffset> _BudgetClosedDate;
         partial void OnBudgetClosedDateChanging(global::System.Nullable<global::System.DateTimeOffset> value);
         partial void OnBudgetClosedDateChanged();
+        /// <summary>
+        /// There are no comments for Property TeamProject in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Team Project")]
+        public string TeamProject
+        {
+            get
+            {
+                return this._TeamProject;
+            }
+            set
+            {
+                this.OnTeamProjectChanging(value);
+                this._TeamProject = value;
+                this.OnTeamProjectChanged();
+                this.OnPropertyChanged("TeamProject");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _TeamProject;
+        partial void OnTeamProjectChanging(string value);
+        partial void OnTeamProjectChanged();
         /// <summary>
         /// There are no comments for Property DurationinSeconds in the schema.
         /// </summary>
@@ -895,9 +987,13 @@ namespace Default
         <Key>
           <PropertyRef Name=""Row ID"" />
         </Key>
+        <Property Name=""Completed Work"" Type=""Edm.Double"" />
         <Property Name=""Iteration ID"" Type=""Edm.Int32"" />
+        <Property Name=""Effort"" Type=""Edm.Double"" />
         <Property Name=""Top TFS ID"" Type=""Edm.Int32"" />
         <Property Name=""Top TFS Story Point"" Type=""Edm.Double"" />
+        <Property Name=""Original Estimate"" Type=""Edm.Double"" />
+        <Property Name=""Story Points"" Type=""Edm.Double"" />
         <Property Name=""Time Tracked"" Type=""Edm.Double"" Nullable=""false"" />
         <Property Name=""Parent TFS Story Point"" Type=""Edm.Double"" />
         <Property Name=""Parent TFS ID"" Type=""Edm.Int32"" />
@@ -906,7 +1002,6 @@ namespace Default
         <Property Name=""Team Member"" Type=""Edm.String"" />
         <Property Name=""Top TFS Title"" Type=""Edm.String"" />
         <Property Name=""Work Item State"" Type=""Edm.String"" />
-        <Property Name=""Project Name"" Type=""Edm.String"" />
         <Property Name=""Comment"" Type=""Edm.String"" />
         <Property Name=""Area Path"" Type=""Edm.String"" />
         <Property Name=""Iteration Path"" Type=""Edm.String"" />
@@ -916,6 +1011,7 @@ namespace Default
         <Property Name=""TFS ID"" Type=""Edm.Int32"" />
         <Property Name=""TFS Title"" Type=""Edm.String"" />
         <Property Name="" Budget Closed Date"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""Team Project"" Type=""Edm.String"" />
         <Property Name=""Duration in Seconds"" Type=""Edm.Double"" Nullable=""false"" />
         <Property Name=""Budget ID"" Type=""Edm.Guid"" />
         <Property Name=""Budget Hours"" Type=""Edm.Int32"" />
@@ -928,8 +1024,8 @@ namespace Default
     </Schema>
     <Schema Namespace=""Default"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
       <Function Name=""TimeExport"">
-        <Parameter Name=""StartDate"" Type=""Edm.String"" Nullable=""false"" Unicode=""false"" />
-        <Parameter Name=""EndDate"" Type=""Edm.String"" Nullable=""false"" Unicode=""false"" />
+        <Parameter Name=""StartDate"" Type=""Edm.String"" Nullable=""false"" />
+        <Parameter Name=""EndDate"" Type=""Edm.String"" Nullable=""false"" />
         <Parameter Name=""PopulateTopParentColumns"" Type=""Edm.Boolean"" />
         <Parameter Name=""GroupTimeByDateByUser"" Type=""Edm.Boolean"" />
         <ReturnType Type=""Collection(TimetrackerOnline.BusinessLayer.Models.ExportItemViewModelApi)"" />
