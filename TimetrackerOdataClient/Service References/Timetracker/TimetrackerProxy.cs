@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 16.03.2017 14:59:19
+// Generation date: 22.03.2017 11:01:56
 namespace TimetrackerOnline.BusinessLayer.Models
 {
     /// <summary>
@@ -302,6 +302,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
         private global::System.Nullable<int> _ParentTFSID;
         partial void OnParentTFSIDChanging(global::System.Nullable<int> value);
         partial void OnParentTFSIDChanged();
+        /// <summary>
+        /// There are no comments for Property BillablePeriodLength in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Billable Period Length")]
+        public global::System.Nullable<double> BillablePeriodLength
+        {
+            get
+            {
+                return this._BillablePeriodLength;
+            }
+            set
+            {
+                this.OnBillablePeriodLengthChanging(value);
+                this._BillablePeriodLength = value;
+                this.OnBillablePeriodLengthChanged();
+                this.OnPropertyChanged("BillablePeriodLength");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _BillablePeriodLength;
+        partial void OnBillablePeriodLengthChanging(global::System.Nullable<double> value);
+        partial void OnBillablePeriodLengthChanged();
         /// <summary>
         /// There are no comments for Property Budget in the schema.
         /// </summary>
@@ -740,6 +763,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
         partial void OnRecordDateChanging(global::System.DateTimeOffset value);
         partial void OnRecordDateChanged();
         /// <summary>
+        /// There are no comments for Property IsBillable in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Is Billable")]
+        public global::System.Nullable<bool> IsBillable
+        {
+            get
+            {
+                return this._IsBillable;
+            }
+            set
+            {
+                this.OnIsBillableChanging(value);
+                this._IsBillable = value;
+                this.OnIsBillableChanged();
+                this.OnPropertyChanged("IsBillable");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<bool> _IsBillable;
+        partial void OnIsBillableChanging(global::System.Nullable<bool> value);
+        partial void OnIsBillableChanged();
+        /// <summary>
         /// There are no comments for Property InheritedBudget in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
@@ -997,6 +1043,7 @@ namespace Default
         <Property Name=""Time Tracked"" Type=""Edm.Double"" Nullable=""false"" />
         <Property Name=""Parent TFS Story Point"" Type=""Edm.Double"" />
         <Property Name=""Parent TFS ID"" Type=""Edm.Int32"" />
+        <Property Name=""Billable Period Length"" Type=""Edm.Double"" />
         <Property Name=""Budget"" Type=""Edm.String"" />
         <Property Name=""User ID"" Type=""Edm.Guid"" Nullable=""false"" />
         <Property Name=""Team Member"" Type=""Edm.String"" />
@@ -1016,6 +1063,7 @@ namespace Default
         <Property Name=""Budget ID"" Type=""Edm.Guid"" />
         <Property Name=""Budget Hours"" Type=""Edm.Int32"" />
         <Property Name=""Record Date"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""Is Billable"" Type=""Edm.Boolean"" />
         <Property Name=""Inherited Budget"" Type=""Edm.Boolean"" />
         <Property Name=""Parent TFS Title"" Type=""Edm.String"" />
         <Property Name=""Tracked Time Type"" Type=""Edm.String"" />
@@ -1028,6 +1076,7 @@ namespace Default
         <Parameter Name=""EndDate"" Type=""Edm.String"" Nullable=""false"" />
         <Parameter Name=""PopulateTopParentColumns"" Type=""Edm.Boolean"" />
         <Parameter Name=""GroupTimeByDateByUser"" Type=""Edm.Boolean"" />
+        <Parameter Name=""IncludeBillable"" Type=""Edm.Boolean"" />
         <ReturnType Type=""Collection(TimetrackerOnline.BusinessLayer.Models.ExportItemViewModelApi)"" />
       </Function>
       <EntityContainer Name=""Container"">
@@ -1065,12 +1114,13 @@ namespace Default
         /// There are no comments for TimeExport in the schema.
         /// </summary>
         [global::Microsoft.OData.Client.OriginalNameAttribute("TimeExport")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::TimetrackerOnline.BusinessLayer.Models.ExportItemViewModelApi> TimeExport(string StartDate, string EndDate, global::System.Nullable<bool> PopulateTopParentColumns, global::System.Nullable<bool> GroupTimeByDateByUser)
+        public global::Microsoft.OData.Client.DataServiceQuery<global::TimetrackerOnline.BusinessLayer.Models.ExportItemViewModelApi> TimeExport(string StartDate, string EndDate, global::System.Nullable<bool> PopulateTopParentColumns, global::System.Nullable<bool> GroupTimeByDateByUser, global::System.Nullable<bool> IncludeBillable)
         {
             return this.CreateFunctionQuery<global::TimetrackerOnline.BusinessLayer.Models.ExportItemViewModelApi>("", "TimeExport", false, new global::Microsoft.OData.Client.UriOperationParameter("StartDate", StartDate),
                     new global::Microsoft.OData.Client.UriOperationParameter("EndDate", EndDate),
                     new global::Microsoft.OData.Client.UriOperationParameter("PopulateTopParentColumns", PopulateTopParentColumns),
-                    new global::Microsoft.OData.Client.UriOperationParameter("GroupTimeByDateByUser", GroupTimeByDateByUser));
+                    new global::Microsoft.OData.Client.UriOperationParameter("GroupTimeByDateByUser", GroupTimeByDateByUser),
+                    new global::Microsoft.OData.Client.UriOperationParameter("IncludeBillable", IncludeBillable));
         }
     }
 }
