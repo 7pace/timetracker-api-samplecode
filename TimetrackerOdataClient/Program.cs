@@ -29,7 +29,7 @@ namespace TimetrackerOdataClient
             var startDate = DateTime.Today.AddMonths( -3 ).ToString( DateParametersFormat );
             var endDate = DateTime.Today.ToString( DateParametersFormat );
 
-            var timeExport = context.Container.TimeExport( startDate, endDate, null, null );
+            var timeExport = context.Container.TimeExport( startDate, endDate, null, null, null );
             var timeExportResult = timeExport.ToArray();
 
             // Print out the result
