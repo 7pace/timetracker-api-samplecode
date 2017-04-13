@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 22.03.2017 11:01:56
+// Generation date: 13.04.2017 12:23:32
 namespace TimetrackerOnline.BusinessLayer.Models
 {
     /// <summary>
@@ -694,6 +694,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
         partial void OnDurationinSecondsChanging(double value);
         partial void OnDurationinSecondsChanged();
         /// <summary>
+        /// There are no comments for Property ActivityType in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Activity Type")]
+        public string ActivityType
+        {
+            get
+            {
+                return this._ActivityType;
+            }
+            set
+            {
+                this.OnActivityTypeChanging(value);
+                this._ActivityType = value;
+                this.OnActivityTypeChanged();
+                this.OnPropertyChanged("ActivityType");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _ActivityType;
+        partial void OnActivityTypeChanging(string value);
+        partial void OnActivityTypeChanged();
+        /// <summary>
         /// There are no comments for Property BudgetID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
@@ -1060,6 +1083,7 @@ namespace Default
         <Property Name="" Budget Closed Date"" Type=""Edm.DateTimeOffset"" />
         <Property Name=""Team Project"" Type=""Edm.String"" />
         <Property Name=""Duration in Seconds"" Type=""Edm.Double"" Nullable=""false"" />
+        <Property Name=""Activity Type"" Type=""Edm.String"" />
         <Property Name=""Budget ID"" Type=""Edm.Guid"" />
         <Property Name=""Budget Hours"" Type=""Edm.Int32"" />
         <Property Name=""Record Date"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
