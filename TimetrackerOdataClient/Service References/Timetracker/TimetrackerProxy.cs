@@ -7,7 +7,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 // Generation date: 13.04.2017 12:23:32
 namespace TimetrackerOnline.BusinessLayer.Models
 {
