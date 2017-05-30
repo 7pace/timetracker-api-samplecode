@@ -36,7 +36,6 @@ THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <#@ Import Namespace="Microsoft.OData.Edm.Vocabularies.Community.V1" #>
 <#@ Import Namespace="System.Text"#>
 <#@ Import Namespace="System.Net"#>
-<#@ Import Namespace="System.Text.RegularExpressions"#>
 <#
     CodeGenerationContext context;
     if (!string.IsNullOrWhiteSpace(this.Edmx))
@@ -2595,15 +2594,12 @@ internal static class Utils
             return text;
         }
 
-        Regex rgx = new Regex("[^a-zA-Z0-9]");
-        var filteredText = rgx.Replace(text, "");
-
-        if (filteredText.Length == 1)
+        if (text.Length == 1)
         {
-            return filteredText[0].ToString(CultureInfo.InvariantCulture).ToLowerInvariant();
+            return text[0].ToString(CultureInfo.InvariantCulture).ToLowerInvariant();
         }
 
-        return filteredText[0].ToString(CultureInfo.InvariantCulture).ToLowerInvariant() + filteredText.Substring(1);
+        return text[0].ToString(CultureInfo.InvariantCulture).ToLowerInvariant() + text.Substring(1);
     }
 
     /// <summary>
@@ -3658,7 +3654,7 @@ namespace <#= fullNamespace #>
         if (writeOnPropertyChanged)
         {
 #>
-                this.OnPropertyChanged("<#= fixedPropertyName #>");
+                this.OnPropertyChanged("<#= originalPropertyName #>");
 <#+
         }
 #>

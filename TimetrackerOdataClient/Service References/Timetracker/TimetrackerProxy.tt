@@ -40,15 +40,12 @@ public static class Customization
 			return text;
 		}
 
-        Regex rgx = new Regex("[^a-zA-Z0-9]");
-        var filteredText = rgx.Replace(text, "");
-
-		if (filteredText.Length == 1)
+		if (text.Length == 1)
 		{
-			return Char.ToUpperInvariant(filteredText[0]).ToString(CultureInfo.InvariantCulture);
+			return Char.ToUpperInvariant(text[0]).ToString(CultureInfo.InvariantCulture);
 		}
 
-        return Char.ToUpperInvariant(filteredText[0]) + filteredText.Substring(1);
+		return Char.ToUpperInvariant(text[0]) + text.Substring(1);
 	}
 
 	/// <summary>

@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TimetrackerOdataClient
 {
-    class Program
+    internal class Program
     {
         private const string DateParametersFormat = @"yyyy-MM-dd";
 
-        static void Main ( string[] args )
+        private static void Main ( string[] args )
         {
             // Get parameters
             var cmd = new CommandLine( args );
 
             if ( !cmd.IsParsed )
-            {
                 return;
-            }
 
             // Create OData service context
             var context = cmd.IsWindowsAuth
@@ -34,9 +29,7 @@ namespace TimetrackerOdataClient
 
             // Print out the result
             foreach ( var row in timeExportResult )
-            {
-                Console.WriteLine( "{0:g} {1} {2}", row.RecordDate, row.TeamMember, row.DurationinSeconds );
-            }
+                Console.WriteLine( "{0:g} {1} {2}", row.RecordDate, row.TeamMember, row.DurationInSeconds );
         }
     }
 }

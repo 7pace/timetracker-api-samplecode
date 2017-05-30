@@ -7,7 +7,8 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-// Generation date: 13.04.2017 12:23:32
+
+// Generation date: 30.05.2017 10:23:30
 namespace TimetrackerOnline.BusinessLayer.Models
 {
     /// <summary>
@@ -41,317 +42,67 @@ namespace TimetrackerOnline.BusinessLayer.Models
     /// <KeyProperties>
     /// RowID
     /// </KeyProperties>
-    [global::Microsoft.OData.Client.Key("Row ID")]
+    [global::Microsoft.OData.Client.Key("RowID")]
     [global::Microsoft.OData.Client.OriginalNameAttribute("ExportItemViewModelApi")]
     public partial class ExportItemViewModelApi : global::Microsoft.OData.Client.BaseEntityType, global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
         /// Create a new ExportItemViewModelApi object.
         /// </summary>
-        /// <param name="timeTracked">Initial value of TimeTracked.</param>
-        /// <param name="userID">Initial value of UserID.</param>
         /// <param name="rowID">Initial value of RowID.</param>
-        /// <param name="budgetClosed">Initial value of BudgetClosed.</param>
-        /// <param name="durationinSeconds">Initial value of DurationinSeconds.</param>
+        /// <param name="userID">Initial value of UserID.</param>
         /// <param name="recordDate">Initial value of RecordDate.</param>
+        /// <param name="recordDateStop">Initial value of RecordDateStop.</param>
+        /// <param name="timeTracked">Initial value of TimeTracked.</param>
+        /// <param name="budgetClosed">Initial value of BudgetClosed.</param>
+        /// <param name="durationInSeconds">Initial value of DurationInSeconds.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        public static ExportItemViewModelApi CreateExportItemViewModelApi(double timeTracked, 
+        public static ExportItemViewModelApi CreateExportItemViewModelApi(global::System.Guid rowID, 
                     global::System.Guid userID, 
-                    global::System.Guid rowID, 
+                    global::System.DateTimeOffset recordDate, 
+                    global::System.DateTimeOffset recordDateStop, 
+                    double timeTracked, 
                     bool budgetClosed, 
-                    double durationinSeconds, 
-                    global::System.DateTimeOffset recordDate)
+                    double durationInSeconds)
         {
             ExportItemViewModelApi exportItemViewModelApi = new ExportItemViewModelApi();
-            exportItemViewModelApi.TimeTracked = timeTracked;
-            exportItemViewModelApi.UserID = userID;
             exportItemViewModelApi.RowID = rowID;
-            exportItemViewModelApi.BudgetClosed = budgetClosed;
-            exportItemViewModelApi.DurationinSeconds = durationinSeconds;
+            exportItemViewModelApi.UserID = userID;
             exportItemViewModelApi.RecordDate = recordDate;
+            exportItemViewModelApi.RecordDateStop = recordDateStop;
+            exportItemViewModelApi.TimeTracked = timeTracked;
+            exportItemViewModelApi.BudgetClosed = budgetClosed;
+            exportItemViewModelApi.DurationInSeconds = durationInSeconds;
             return exportItemViewModelApi;
         }
         /// <summary>
-        /// There are no comments for Property CompletedWork in the schema.
+        /// There are no comments for Property RowID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Completed Work")]
-        public global::System.Nullable<double> CompletedWork
+        [global::Microsoft.OData.Client.OriginalNameAttribute("RowID")]
+        public global::System.Guid RowID
         {
             get
             {
-                return this._CompletedWork;
+                return this._RowID;
             }
             set
             {
-                this.OnCompletedWorkChanging(value);
-                this._CompletedWork = value;
-                this.OnCompletedWorkChanged();
-                this.OnPropertyChanged("CompletedWork");
+                this.OnRowIDChanging(value);
+                this._RowID = value;
+                this.OnRowIDChanged();
+                this.OnPropertyChanged("RowID");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _CompletedWork;
-        partial void OnCompletedWorkChanging(global::System.Nullable<double> value);
-        partial void OnCompletedWorkChanged();
-        /// <summary>
-        /// There are no comments for Property IterationID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Iteration ID")]
-        public global::System.Nullable<int> IterationID
-        {
-            get
-            {
-                return this._IterationID;
-            }
-            set
-            {
-                this.OnIterationIDChanging(value);
-                this._IterationID = value;
-                this.OnIterationIDChanged();
-                this.OnPropertyChanged("IterationID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<int> _IterationID;
-        partial void OnIterationIDChanging(global::System.Nullable<int> value);
-        partial void OnIterationIDChanged();
-        /// <summary>
-        /// There are no comments for Property Effort in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Effort")]
-        public global::System.Nullable<double> Effort
-        {
-            get
-            {
-                return this._Effort;
-            }
-            set
-            {
-                this.OnEffortChanging(value);
-                this._Effort = value;
-                this.OnEffortChanged();
-                this.OnPropertyChanged("Effort");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _Effort;
-        partial void OnEffortChanging(global::System.Nullable<double> value);
-        partial void OnEffortChanged();
-        /// <summary>
-        /// There are no comments for Property TopTFSID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Top TFS ID")]
-        public global::System.Nullable<int> TopTFSID
-        {
-            get
-            {
-                return this._TopTFSID;
-            }
-            set
-            {
-                this.OnTopTFSIDChanging(value);
-                this._TopTFSID = value;
-                this.OnTopTFSIDChanged();
-                this.OnPropertyChanged("TopTFSID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<int> _TopTFSID;
-        partial void OnTopTFSIDChanging(global::System.Nullable<int> value);
-        partial void OnTopTFSIDChanged();
-        /// <summary>
-        /// There are no comments for Property TopTFSStoryPoint in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Top TFS Story Point")]
-        public global::System.Nullable<double> TopTFSStoryPoint
-        {
-            get
-            {
-                return this._TopTFSStoryPoint;
-            }
-            set
-            {
-                this.OnTopTFSStoryPointChanging(value);
-                this._TopTFSStoryPoint = value;
-                this.OnTopTFSStoryPointChanged();
-                this.OnPropertyChanged("TopTFSStoryPoint");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _TopTFSStoryPoint;
-        partial void OnTopTFSStoryPointChanging(global::System.Nullable<double> value);
-        partial void OnTopTFSStoryPointChanged();
-        /// <summary>
-        /// There are no comments for Property OriginalEstimate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Original Estimate")]
-        public global::System.Nullable<double> OriginalEstimate
-        {
-            get
-            {
-                return this._OriginalEstimate;
-            }
-            set
-            {
-                this.OnOriginalEstimateChanging(value);
-                this._OriginalEstimate = value;
-                this.OnOriginalEstimateChanged();
-                this.OnPropertyChanged("OriginalEstimate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _OriginalEstimate;
-        partial void OnOriginalEstimateChanging(global::System.Nullable<double> value);
-        partial void OnOriginalEstimateChanged();
-        /// <summary>
-        /// There are no comments for Property StoryPoints in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Story Points")]
-        public global::System.Nullable<double> StoryPoints
-        {
-            get
-            {
-                return this._StoryPoints;
-            }
-            set
-            {
-                this.OnStoryPointsChanging(value);
-                this._StoryPoints = value;
-                this.OnStoryPointsChanged();
-                this.OnPropertyChanged("StoryPoints");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _StoryPoints;
-        partial void OnStoryPointsChanging(global::System.Nullable<double> value);
-        partial void OnStoryPointsChanged();
-        /// <summary>
-        /// There are no comments for Property TimeTracked in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Time Tracked")]
-        public double TimeTracked
-        {
-            get
-            {
-                return this._TimeTracked;
-            }
-            set
-            {
-                this.OnTimeTrackedChanging(value);
-                this._TimeTracked = value;
-                this.OnTimeTrackedChanged();
-                this.OnPropertyChanged("TimeTracked");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private double _TimeTracked;
-        partial void OnTimeTrackedChanging(double value);
-        partial void OnTimeTrackedChanged();
-        /// <summary>
-        /// There are no comments for Property ParentTFSStoryPoint in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Parent TFS Story Point")]
-        public global::System.Nullable<double> ParentTFSStoryPoint
-        {
-            get
-            {
-                return this._ParentTFSStoryPoint;
-            }
-            set
-            {
-                this.OnParentTFSStoryPointChanging(value);
-                this._ParentTFSStoryPoint = value;
-                this.OnParentTFSStoryPointChanged();
-                this.OnPropertyChanged("ParentTFSStoryPoint");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _ParentTFSStoryPoint;
-        partial void OnParentTFSStoryPointChanging(global::System.Nullable<double> value);
-        partial void OnParentTFSStoryPointChanged();
-        /// <summary>
-        /// There are no comments for Property ParentTFSID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Parent TFS ID")]
-        public global::System.Nullable<int> ParentTFSID
-        {
-            get
-            {
-                return this._ParentTFSID;
-            }
-            set
-            {
-                this.OnParentTFSIDChanging(value);
-                this._ParentTFSID = value;
-                this.OnParentTFSIDChanged();
-                this.OnPropertyChanged("ParentTFSID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<int> _ParentTFSID;
-        partial void OnParentTFSIDChanging(global::System.Nullable<int> value);
-        partial void OnParentTFSIDChanged();
-        /// <summary>
-        /// There are no comments for Property BillablePeriodLength in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Billable Period Length")]
-        public global::System.Nullable<double> BillablePeriodLength
-        {
-            get
-            {
-                return this._BillablePeriodLength;
-            }
-            set
-            {
-                this.OnBillablePeriodLengthChanging(value);
-                this._BillablePeriodLength = value;
-                this.OnBillablePeriodLengthChanged();
-                this.OnPropertyChanged("BillablePeriodLength");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<double> _BillablePeriodLength;
-        partial void OnBillablePeriodLengthChanging(global::System.Nullable<double> value);
-        partial void OnBillablePeriodLengthChanged();
-        /// <summary>
-        /// There are no comments for Property Budget in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Budget")]
-        public string Budget
-        {
-            get
-            {
-                return this._Budget;
-            }
-            set
-            {
-                this.OnBudgetChanging(value);
-                this._Budget = value;
-                this.OnBudgetChanged();
-                this.OnPropertyChanged("Budget");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _Budget;
-        partial void OnBudgetChanging(string value);
-        partial void OnBudgetChanged();
+        private global::System.Guid _RowID;
+        partial void OnRowIDChanging(global::System.Guid value);
+        partial void OnRowIDChanged();
         /// <summary>
         /// There are no comments for Property UserID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("User ID")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("UserID")]
         public global::System.Guid UserID
         {
             get
@@ -374,7 +125,7 @@ namespace TimetrackerOnline.BusinessLayer.Models
         /// There are no comments for Property TeamMember in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Team Member")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TeamMember")]
         public string TeamMember
         {
             get
@@ -394,51 +145,51 @@ namespace TimetrackerOnline.BusinessLayer.Models
         partial void OnTeamMemberChanging(string value);
         partial void OnTeamMemberChanged();
         /// <summary>
-        /// There are no comments for Property TopTFSTitle in the schema.
+        /// There are no comments for Property TFSID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Top TFS Title")]
-        public string TopTFSTitle
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TFSID")]
+        public global::System.Nullable<int> TFSID
         {
             get
             {
-                return this._TopTFSTitle;
+                return this._TFSID;
             }
             set
             {
-                this.OnTopTFSTitleChanging(value);
-                this._TopTFSTitle = value;
-                this.OnTopTFSTitleChanged();
-                this.OnPropertyChanged("TopTFSTitle");
+                this.OnTFSIDChanging(value);
+                this._TFSID = value;
+                this.OnTFSIDChanged();
+                this.OnPropertyChanged("TFSID");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _TopTFSTitle;
-        partial void OnTopTFSTitleChanging(string value);
-        partial void OnTopTFSTitleChanged();
+        private global::System.Nullable<int> _TFSID;
+        partial void OnTFSIDChanging(global::System.Nullable<int> value);
+        partial void OnTFSIDChanged();
         /// <summary>
-        /// There are no comments for Property WorkItemState in the schema.
+        /// There are no comments for Property TFSTitle in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Work Item State")]
-        public string WorkItemState
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TFSTitle")]
+        public string TFSTitle
         {
             get
             {
-                return this._WorkItemState;
+                return this._TFSTitle;
             }
             set
             {
-                this.OnWorkItemStateChanging(value);
-                this._WorkItemState = value;
-                this.OnWorkItemStateChanged();
-                this.OnPropertyChanged("WorkItemState");
+                this.OnTFSTitleChanging(value);
+                this._TFSTitle = value;
+                this.OnTFSTitleChanged();
+                this.OnPropertyChanged("TFSTitle");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _WorkItemState;
-        partial void OnWorkItemStateChanging(string value);
-        partial void OnWorkItemStateChanged();
+        private string _TFSTitle;
+        partial void OnTFSTitleChanging(string value);
+        partial void OnTFSTitleChanged();
         /// <summary>
         /// There are no comments for Property Comment in the schema.
         /// </summary>
@@ -463,309 +214,10 @@ namespace TimetrackerOnline.BusinessLayer.Models
         partial void OnCommentChanging(string value);
         partial void OnCommentChanged();
         /// <summary>
-        /// There are no comments for Property AreaPath in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Area Path")]
-        public string AreaPath
-        {
-            get
-            {
-                return this._AreaPath;
-            }
-            set
-            {
-                this.OnAreaPathChanging(value);
-                this._AreaPath = value;
-                this.OnAreaPathChanged();
-                this.OnPropertyChanged("AreaPath");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _AreaPath;
-        partial void OnAreaPathChanging(string value);
-        partial void OnAreaPathChanged();
-        /// <summary>
-        /// There are no comments for Property IterationPath in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Iteration Path")]
-        public string IterationPath
-        {
-            get
-            {
-                return this._IterationPath;
-            }
-            set
-            {
-                this.OnIterationPathChanging(value);
-                this._IterationPath = value;
-                this.OnIterationPathChanged();
-                this.OnPropertyChanged("IterationPath");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _IterationPath;
-        partial void OnIterationPathChanging(string value);
-        partial void OnIterationPathChanged();
-        /// <summary>
-        /// There are no comments for Property ProjectID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Project ID")]
-        public string ProjectID
-        {
-            get
-            {
-                return this._ProjectID;
-            }
-            set
-            {
-                this.OnProjectIDChanging(value);
-                this._ProjectID = value;
-                this.OnProjectIDChanged();
-                this.OnPropertyChanged("ProjectID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _ProjectID;
-        partial void OnProjectIDChanging(string value);
-        partial void OnProjectIDChanged();
-        /// <summary>
-        /// There are no comments for Property RowID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Row ID")]
-        public global::System.Guid RowID
-        {
-            get
-            {
-                return this._RowID;
-            }
-            set
-            {
-                this.OnRowIDChanging(value);
-                this._RowID = value;
-                this.OnRowIDChanged();
-                this.OnPropertyChanged("RowID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Guid _RowID;
-        partial void OnRowIDChanging(global::System.Guid value);
-        partial void OnRowIDChanged();
-        /// <summary>
-        /// There are no comments for Property BudgetClosed in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Budget Closed")]
-        public bool BudgetClosed
-        {
-            get
-            {
-                return this._BudgetClosed;
-            }
-            set
-            {
-                this.OnBudgetClosedChanging(value);
-                this._BudgetClosed = value;
-                this.OnBudgetClosedChanged();
-                this.OnPropertyChanged("BudgetClosed");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private bool _BudgetClosed;
-        partial void OnBudgetClosedChanging(bool value);
-        partial void OnBudgetClosedChanged();
-        /// <summary>
-        /// There are no comments for Property TFSID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TFS ID")]
-        public global::System.Nullable<int> TFSID
-        {
-            get
-            {
-                return this._TFSID;
-            }
-            set
-            {
-                this.OnTFSIDChanging(value);
-                this._TFSID = value;
-                this.OnTFSIDChanged();
-                this.OnPropertyChanged("TFSID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<int> _TFSID;
-        partial void OnTFSIDChanging(global::System.Nullable<int> value);
-        partial void OnTFSIDChanged();
-        /// <summary>
-        /// There are no comments for Property TFSTitle in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("TFS Title")]
-        public string TFSTitle
-        {
-            get
-            {
-                return this._TFSTitle;
-            }
-            set
-            {
-                this.OnTFSTitleChanging(value);
-                this._TFSTitle = value;
-                this.OnTFSTitleChanged();
-                this.OnPropertyChanged("TFSTitle");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _TFSTitle;
-        partial void OnTFSTitleChanging(string value);
-        partial void OnTFSTitleChanged();
-        /// <summary>
-        /// There are no comments for Property BudgetClosedDate in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute(" Budget Closed Date")]
-        public global::System.Nullable<global::System.DateTimeOffset> BudgetClosedDate
-        {
-            get
-            {
-                return this._BudgetClosedDate;
-            }
-            set
-            {
-                this.OnBudgetClosedDateChanging(value);
-                this._BudgetClosedDate = value;
-                this.OnBudgetClosedDateChanged();
-                this.OnPropertyChanged("BudgetClosedDate");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<global::System.DateTimeOffset> _BudgetClosedDate;
-        partial void OnBudgetClosedDateChanging(global::System.Nullable<global::System.DateTimeOffset> value);
-        partial void OnBudgetClosedDateChanged();
-        /// <summary>
-        /// There are no comments for Property TeamProject in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Team Project")]
-        public string TeamProject
-        {
-            get
-            {
-                return this._TeamProject;
-            }
-            set
-            {
-                this.OnTeamProjectChanging(value);
-                this._TeamProject = value;
-                this.OnTeamProjectChanged();
-                this.OnPropertyChanged("TeamProject");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _TeamProject;
-        partial void OnTeamProjectChanging(string value);
-        partial void OnTeamProjectChanged();
-        /// <summary>
-        /// There are no comments for Property DurationinSeconds in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Duration in Seconds")]
-        public double DurationinSeconds
-        {
-            get
-            {
-                return this._DurationinSeconds;
-            }
-            set
-            {
-                this.OnDurationinSecondsChanging(value);
-                this._DurationinSeconds = value;
-                this.OnDurationinSecondsChanged();
-                this.OnPropertyChanged("DurationinSeconds");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private double _DurationinSeconds;
-        partial void OnDurationinSecondsChanging(double value);
-        partial void OnDurationinSecondsChanged();
-        /// <summary>
-        /// There are no comments for Property ActivityType in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Activity Type")]
-        public string ActivityType
-        {
-            get
-            {
-                return this._ActivityType;
-            }
-            set
-            {
-                this.OnActivityTypeChanging(value);
-                this._ActivityType = value;
-                this.OnActivityTypeChanged();
-                this.OnPropertyChanged("ActivityType");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _ActivityType;
-        partial void OnActivityTypeChanging(string value);
-        partial void OnActivityTypeChanged();
-        /// <summary>
-        /// There are no comments for Property BudgetID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Budget ID")]
-        public global::System.Nullable<global::System.Guid> BudgetID
-        {
-            get
-            {
-                return this._BudgetID;
-            }
-            set
-            {
-                this.OnBudgetIDChanging(value);
-                this._BudgetID = value;
-                this.OnBudgetIDChanged();
-                this.OnPropertyChanged("BudgetID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<global::System.Guid> _BudgetID;
-        partial void OnBudgetIDChanging(global::System.Nullable<global::System.Guid> value);
-        partial void OnBudgetIDChanged();
-        /// <summary>
-        /// There are no comments for Property BudgetHours in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Budget Hours")]
-        public global::System.Nullable<int> BudgetHours
-        {
-            get
-            {
-                return this._BudgetHours;
-            }
-            set
-            {
-                this.OnBudgetHoursChanging(value);
-                this._BudgetHours = value;
-                this.OnBudgetHoursChanged();
-                this.OnPropertyChanged("BudgetHours");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<int> _BudgetHours;
-        partial void OnBudgetHoursChanging(global::System.Nullable<int> value);
-        partial void OnBudgetHoursChanged();
-        /// <summary>
         /// There are no comments for Property RecordDate in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Record Date")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("RecordDate")]
         public global::System.DateTimeOffset RecordDate
         {
             get
@@ -785,79 +237,79 @@ namespace TimetrackerOnline.BusinessLayer.Models
         partial void OnRecordDateChanging(global::System.DateTimeOffset value);
         partial void OnRecordDateChanged();
         /// <summary>
-        /// There are no comments for Property IsBillable in the schema.
+        /// There are no comments for Property RecordDateStop in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Is Billable")]
-        public global::System.Nullable<bool> IsBillable
+        [global::Microsoft.OData.Client.OriginalNameAttribute("RecordDateStop")]
+        public global::System.DateTimeOffset RecordDateStop
         {
             get
             {
-                return this._IsBillable;
+                return this._RecordDateStop;
             }
             set
             {
-                this.OnIsBillableChanging(value);
-                this._IsBillable = value;
-                this.OnIsBillableChanged();
-                this.OnPropertyChanged("IsBillable");
+                this.OnRecordDateStopChanging(value);
+                this._RecordDateStop = value;
+                this.OnRecordDateStopChanged();
+                this.OnPropertyChanged("RecordDateStop");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<bool> _IsBillable;
-        partial void OnIsBillableChanging(global::System.Nullable<bool> value);
-        partial void OnIsBillableChanged();
+        private global::System.DateTimeOffset _RecordDateStop;
+        partial void OnRecordDateStopChanging(global::System.DateTimeOffset value);
+        partial void OnRecordDateStopChanged();
         /// <summary>
-        /// There are no comments for Property InheritedBudget in the schema.
+        /// There are no comments for Property TimeTracked in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Inherited Budget")]
-        public global::System.Nullable<bool> InheritedBudget
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TimeTracked")]
+        public double TimeTracked
         {
             get
             {
-                return this._InheritedBudget;
+                return this._TimeTracked;
             }
             set
             {
-                this.OnInheritedBudgetChanging(value);
-                this._InheritedBudget = value;
-                this.OnInheritedBudgetChanged();
-                this.OnPropertyChanged("InheritedBudget");
+                this.OnTimeTrackedChanging(value);
+                this._TimeTracked = value;
+                this.OnTimeTrackedChanged();
+                this.OnPropertyChanged("TimeTracked");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private global::System.Nullable<bool> _InheritedBudget;
-        partial void OnInheritedBudgetChanging(global::System.Nullable<bool> value);
-        partial void OnInheritedBudgetChanged();
+        private double _TimeTracked;
+        partial void OnTimeTrackedChanging(double value);
+        partial void OnTimeTrackedChanged();
         /// <summary>
-        /// There are no comments for Property ParentTFSTitle in the schema.
+        /// There are no comments for Property ActivityType in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Parent TFS Title")]
-        public string ParentTFSTitle
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ActivityType")]
+        public string ActivityType
         {
             get
             {
-                return this._ParentTFSTitle;
+                return this._ActivityType;
             }
             set
             {
-                this.OnParentTFSTitleChanging(value);
-                this._ParentTFSTitle = value;
-                this.OnParentTFSTitleChanged();
-                this.OnPropertyChanged("ParentTFSTitle");
+                this.OnActivityTypeChanging(value);
+                this._ActivityType = value;
+                this.OnActivityTypeChanged();
+                this.OnPropertyChanged("ActivityType");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        private string _ParentTFSTitle;
-        partial void OnParentTFSTitleChanging(string value);
-        partial void OnParentTFSTitleChanged();
+        private string _ActivityType;
+        partial void OnActivityTypeChanging(string value);
+        partial void OnActivityTypeChanged();
         /// <summary>
         /// There are no comments for Property TrackedTimeType in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Tracked Time Type")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TrackedTimeType")]
         public string TrackedTimeType
         {
             get
@@ -880,7 +332,7 @@ namespace TimetrackerOnline.BusinessLayer.Models
         /// There are no comments for Property WorkItemType in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
-        [global::Microsoft.OData.Client.OriginalNameAttribute("Work Item Type")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkItemType")]
         public string WorkItemType
         {
             get
@@ -899,6 +351,581 @@ namespace TimetrackerOnline.BusinessLayer.Models
         private string _WorkItemType;
         partial void OnWorkItemTypeChanging(string value);
         partial void OnWorkItemTypeChanged();
+        /// <summary>
+        /// There are no comments for Property TeamProject in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TeamProject")]
+        public string TeamProject
+        {
+            get
+            {
+                return this._TeamProject;
+            }
+            set
+            {
+                this.OnTeamProjectChanging(value);
+                this._TeamProject = value;
+                this.OnTeamProjectChanged();
+                this.OnPropertyChanged("TeamProject");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _TeamProject;
+        partial void OnTeamProjectChanging(string value);
+        partial void OnTeamProjectChanged();
+        /// <summary>
+        /// There are no comments for Property Effort in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Effort")]
+        public global::System.Nullable<double> Effort
+        {
+            get
+            {
+                return this._Effort;
+            }
+            set
+            {
+                this.OnEffortChanging(value);
+                this._Effort = value;
+                this.OnEffortChanged();
+                this.OnPropertyChanged("Effort");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _Effort;
+        partial void OnEffortChanging(global::System.Nullable<double> value);
+        partial void OnEffortChanged();
+        /// <summary>
+        /// There are no comments for Property StoryPoints in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("StoryPoints")]
+        public global::System.Nullable<double> StoryPoints
+        {
+            get
+            {
+                return this._StoryPoints;
+            }
+            set
+            {
+                this.OnStoryPointsChanging(value);
+                this._StoryPoints = value;
+                this.OnStoryPointsChanged();
+                this.OnPropertyChanged("StoryPoints");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _StoryPoints;
+        partial void OnStoryPointsChanging(global::System.Nullable<double> value);
+        partial void OnStoryPointsChanged();
+        /// <summary>
+        /// There are no comments for Property OriginalEstimate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("OriginalEstimate")]
+        public global::System.Nullable<double> OriginalEstimate
+        {
+            get
+            {
+                return this._OriginalEstimate;
+            }
+            set
+            {
+                this.OnOriginalEstimateChanging(value);
+                this._OriginalEstimate = value;
+                this.OnOriginalEstimateChanged();
+                this.OnPropertyChanged("OriginalEstimate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _OriginalEstimate;
+        partial void OnOriginalEstimateChanging(global::System.Nullable<double> value);
+        partial void OnOriginalEstimateChanged();
+        /// <summary>
+        /// There are no comments for Property CompletedWork in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("CompletedWork")]
+        public global::System.Nullable<double> CompletedWork
+        {
+            get
+            {
+                return this._CompletedWork;
+            }
+            set
+            {
+                this.OnCompletedWorkChanging(value);
+                this._CompletedWork = value;
+                this.OnCompletedWorkChanged();
+                this.OnPropertyChanged("CompletedWork");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _CompletedWork;
+        partial void OnCompletedWorkChanging(global::System.Nullable<double> value);
+        partial void OnCompletedWorkChanged();
+        /// <summary>
+        /// There are no comments for Property Budget in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("Budget")]
+        public string Budget
+        {
+            get
+            {
+                return this._Budget;
+            }
+            set
+            {
+                this.OnBudgetChanging(value);
+                this._Budget = value;
+                this.OnBudgetChanged();
+                this.OnPropertyChanged("Budget");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _Budget;
+        partial void OnBudgetChanging(string value);
+        partial void OnBudgetChanged();
+        /// <summary>
+        /// There are no comments for Property BudgetID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("BudgetID")]
+        public global::System.Nullable<global::System.Guid> BudgetID
+        {
+            get
+            {
+                return this._BudgetID;
+            }
+            set
+            {
+                this.OnBudgetIDChanging(value);
+                this._BudgetID = value;
+                this.OnBudgetIDChanged();
+                this.OnPropertyChanged("BudgetID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<global::System.Guid> _BudgetID;
+        partial void OnBudgetIDChanging(global::System.Nullable<global::System.Guid> value);
+        partial void OnBudgetIDChanged();
+        /// <summary>
+        /// There are no comments for Property InheritedBudget in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("InheritedBudget")]
+        public global::System.Nullable<bool> InheritedBudget
+        {
+            get
+            {
+                return this._InheritedBudget;
+            }
+            set
+            {
+                this.OnInheritedBudgetChanging(value);
+                this._InheritedBudget = value;
+                this.OnInheritedBudgetChanged();
+                this.OnPropertyChanged("InheritedBudget");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<bool> _InheritedBudget;
+        partial void OnInheritedBudgetChanging(global::System.Nullable<bool> value);
+        partial void OnInheritedBudgetChanged();
+        /// <summary>
+        /// There are no comments for Property BudgetHours in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("BudgetHours")]
+        public global::System.Nullable<int> BudgetHours
+        {
+            get
+            {
+                return this._BudgetHours;
+            }
+            set
+            {
+                this.OnBudgetHoursChanging(value);
+                this._BudgetHours = value;
+                this.OnBudgetHoursChanged();
+                this.OnPropertyChanged("BudgetHours");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<int> _BudgetHours;
+        partial void OnBudgetHoursChanging(global::System.Nullable<int> value);
+        partial void OnBudgetHoursChanged();
+        /// <summary>
+        /// There are no comments for Property BudgetClosed in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("BudgetClosed")]
+        public bool BudgetClosed
+        {
+            get
+            {
+                return this._BudgetClosed;
+            }
+            set
+            {
+                this.OnBudgetClosedChanging(value);
+                this._BudgetClosed = value;
+                this.OnBudgetClosedChanged();
+                this.OnPropertyChanged("BudgetClosed");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private bool _BudgetClosed;
+        partial void OnBudgetClosedChanging(bool value);
+        partial void OnBudgetClosedChanged();
+        /// <summary>
+        /// There are no comments for Property BudgetClosedDate in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("BudgetClosedDate")]
+        public global::System.Nullable<global::System.DateTimeOffset> BudgetClosedDate
+        {
+            get
+            {
+                return this._BudgetClosedDate;
+            }
+            set
+            {
+                this.OnBudgetClosedDateChanging(value);
+                this._BudgetClosedDate = value;
+                this.OnBudgetClosedDateChanged();
+                this.OnPropertyChanged("BudgetClosedDate");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<global::System.DateTimeOffset> _BudgetClosedDate;
+        partial void OnBudgetClosedDateChanging(global::System.Nullable<global::System.DateTimeOffset> value);
+        partial void OnBudgetClosedDateChanged();
+        /// <summary>
+        /// There are no comments for Property ProjectID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ProjectID")]
+        public string ProjectID
+        {
+            get
+            {
+                return this._ProjectID;
+            }
+            set
+            {
+                this.OnProjectIDChanging(value);
+                this._ProjectID = value;
+                this.OnProjectIDChanged();
+                this.OnPropertyChanged("ProjectID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _ProjectID;
+        partial void OnProjectIDChanging(string value);
+        partial void OnProjectIDChanged();
+        /// <summary>
+        /// There are no comments for Property IterationID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("IterationID")]
+        public global::System.Nullable<int> IterationID
+        {
+            get
+            {
+                return this._IterationID;
+            }
+            set
+            {
+                this.OnIterationIDChanging(value);
+                this._IterationID = value;
+                this.OnIterationIDChanged();
+                this.OnPropertyChanged("IterationID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<int> _IterationID;
+        partial void OnIterationIDChanging(global::System.Nullable<int> value);
+        partial void OnIterationIDChanged();
+        /// <summary>
+        /// There are no comments for Property IterationPath in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("IterationPath")]
+        public string IterationPath
+        {
+            get
+            {
+                return this._IterationPath;
+            }
+            set
+            {
+                this.OnIterationPathChanging(value);
+                this._IterationPath = value;
+                this.OnIterationPathChanged();
+                this.OnPropertyChanged("IterationPath");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _IterationPath;
+        partial void OnIterationPathChanging(string value);
+        partial void OnIterationPathChanged();
+        /// <summary>
+        /// There are no comments for Property AreaPath in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("AreaPath")]
+        public string AreaPath
+        {
+            get
+            {
+                return this._AreaPath;
+            }
+            set
+            {
+                this.OnAreaPathChanging(value);
+                this._AreaPath = value;
+                this.OnAreaPathChanged();
+                this.OnPropertyChanged("AreaPath");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _AreaPath;
+        partial void OnAreaPathChanging(string value);
+        partial void OnAreaPathChanged();
+        /// <summary>
+        /// There are no comments for Property TopTFSID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TopTFSID")]
+        public global::System.Nullable<int> TopTFSID
+        {
+            get
+            {
+                return this._TopTFSID;
+            }
+            set
+            {
+                this.OnTopTFSIDChanging(value);
+                this._TopTFSID = value;
+                this.OnTopTFSIDChanged();
+                this.OnPropertyChanged("TopTFSID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<int> _TopTFSID;
+        partial void OnTopTFSIDChanging(global::System.Nullable<int> value);
+        partial void OnTopTFSIDChanged();
+        /// <summary>
+        /// There are no comments for Property TopTFSTitle in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TopTFSTitle")]
+        public string TopTFSTitle
+        {
+            get
+            {
+                return this._TopTFSTitle;
+            }
+            set
+            {
+                this.OnTopTFSTitleChanging(value);
+                this._TopTFSTitle = value;
+                this.OnTopTFSTitleChanged();
+                this.OnPropertyChanged("TopTFSTitle");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _TopTFSTitle;
+        partial void OnTopTFSTitleChanging(string value);
+        partial void OnTopTFSTitleChanged();
+        /// <summary>
+        /// There are no comments for Property TopTFSStoryPoint in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("TopTFSStoryPoint")]
+        public global::System.Nullable<double> TopTFSStoryPoint
+        {
+            get
+            {
+                return this._TopTFSStoryPoint;
+            }
+            set
+            {
+                this.OnTopTFSStoryPointChanging(value);
+                this._TopTFSStoryPoint = value;
+                this.OnTopTFSStoryPointChanged();
+                this.OnPropertyChanged("TopTFSStoryPoint");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _TopTFSStoryPoint;
+        partial void OnTopTFSStoryPointChanging(global::System.Nullable<double> value);
+        partial void OnTopTFSStoryPointChanged();
+        /// <summary>
+        /// There are no comments for Property ParentTFSID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentTFSID")]
+        public global::System.Nullable<int> ParentTFSID
+        {
+            get
+            {
+                return this._ParentTFSID;
+            }
+            set
+            {
+                this.OnParentTFSIDChanging(value);
+                this._ParentTFSID = value;
+                this.OnParentTFSIDChanged();
+                this.OnPropertyChanged("ParentTFSID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<int> _ParentTFSID;
+        partial void OnParentTFSIDChanging(global::System.Nullable<int> value);
+        partial void OnParentTFSIDChanged();
+        /// <summary>
+        /// There are no comments for Property ParentTFSTitle in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentTFSTitle")]
+        public string ParentTFSTitle
+        {
+            get
+            {
+                return this._ParentTFSTitle;
+            }
+            set
+            {
+                this.OnParentTFSTitleChanging(value);
+                this._ParentTFSTitle = value;
+                this.OnParentTFSTitleChanged();
+                this.OnPropertyChanged("ParentTFSTitle");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _ParentTFSTitle;
+        partial void OnParentTFSTitleChanging(string value);
+        partial void OnParentTFSTitleChanged();
+        /// <summary>
+        /// There are no comments for Property ParentTFSStoryPoint in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ParentTFSStoryPoint")]
+        public global::System.Nullable<double> ParentTFSStoryPoint
+        {
+            get
+            {
+                return this._ParentTFSStoryPoint;
+            }
+            set
+            {
+                this.OnParentTFSStoryPointChanging(value);
+                this._ParentTFSStoryPoint = value;
+                this.OnParentTFSStoryPointChanged();
+                this.OnPropertyChanged("ParentTFSStoryPoint");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _ParentTFSStoryPoint;
+        partial void OnParentTFSStoryPointChanging(global::System.Nullable<double> value);
+        partial void OnParentTFSStoryPointChanged();
+        /// <summary>
+        /// There are no comments for Property WorkItemState in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("WorkItemState")]
+        public string WorkItemState
+        {
+            get
+            {
+                return this._WorkItemState;
+            }
+            set
+            {
+                this.OnWorkItemStateChanging(value);
+                this._WorkItemState = value;
+                this.OnWorkItemStateChanged();
+                this.OnPropertyChanged("WorkItemState");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _WorkItemState;
+        partial void OnWorkItemStateChanging(string value);
+        partial void OnWorkItemStateChanged();
+        /// <summary>
+        /// There are no comments for Property DurationInSeconds in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("DurationInSeconds")]
+        public double DurationInSeconds
+        {
+            get
+            {
+                return this._DurationInSeconds;
+            }
+            set
+            {
+                this.OnDurationInSecondsChanging(value);
+                this._DurationInSeconds = value;
+                this.OnDurationInSecondsChanged();
+                this.OnPropertyChanged("DurationInSeconds");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private double _DurationInSeconds;
+        partial void OnDurationInSecondsChanging(double value);
+        partial void OnDurationInSecondsChanged();
+        /// <summary>
+        /// There are no comments for Property IsBillable in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("IsBillable")]
+        public global::System.Nullable<bool> IsBillable
+        {
+            get
+            {
+                return this._IsBillable;
+            }
+            set
+            {
+                this.OnIsBillableChanging(value);
+                this._IsBillable = value;
+                this.OnIsBillableChanged();
+                this.OnPropertyChanged("IsBillable");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<bool> _IsBillable;
+        partial void OnIsBillableChanging(global::System.Nullable<bool> value);
+        partial void OnIsBillableChanged();
+        /// <summary>
+        /// There are no comments for Property BillablePeriodLength in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("BillablePeriodLength")]
+        public global::System.Nullable<double> BillablePeriodLength
+        {
+            get
+            {
+                return this._BillablePeriodLength;
+            }
+            set
+            {
+                this.OnBillablePeriodLengthChanging(value);
+                this._BillablePeriodLength = value;
+                this.OnBillablePeriodLengthChanged();
+                this.OnPropertyChanged("BillablePeriodLength");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private global::System.Nullable<double> _BillablePeriodLength;
+        partial void OnBillablePeriodLengthChanging(global::System.Nullable<double> value);
+        partial void OnBillablePeriodLengthChanged();
         /// <summary>
         /// This event is raised when the value of the property is changed
         /// </summary>
@@ -941,7 +968,7 @@ namespace TimetrackerOnline.BusinessLayer.Models
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
-                { "Row ID", rowID }
+                { "RowID", rowID }
             };
             return new global::TimetrackerOnline.BusinessLayer.Models.ExportItemViewModelApiSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
@@ -1053,44 +1080,45 @@ namespace Default
     <Schema Namespace=""TimetrackerOnline.BusinessLayer.Models"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
       <EntityType Name=""ExportItemViewModelApi"">
         <Key>
-          <PropertyRef Name=""Row ID"" />
+          <PropertyRef Name=""RowID"" />
         </Key>
-        <Property Name=""Completed Work"" Type=""Edm.Double"" />
-        <Property Name=""Iteration ID"" Type=""Edm.Int32"" />
-        <Property Name=""Effort"" Type=""Edm.Double"" />
-        <Property Name=""Top TFS ID"" Type=""Edm.Int32"" />
-        <Property Name=""Top TFS Story Point"" Type=""Edm.Double"" />
-        <Property Name=""Original Estimate"" Type=""Edm.Double"" />
-        <Property Name=""Story Points"" Type=""Edm.Double"" />
-        <Property Name=""Time Tracked"" Type=""Edm.Double"" Nullable=""false"" />
-        <Property Name=""Parent TFS Story Point"" Type=""Edm.Double"" />
-        <Property Name=""Parent TFS ID"" Type=""Edm.Int32"" />
-        <Property Name=""Billable Period Length"" Type=""Edm.Double"" />
-        <Property Name=""Budget"" Type=""Edm.String"" />
-        <Property Name=""User ID"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Team Member"" Type=""Edm.String"" />
-        <Property Name=""Top TFS Title"" Type=""Edm.String"" />
-        <Property Name=""Work Item State"" Type=""Edm.String"" />
+        <Property Name=""RowID"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""UserID"" Type=""Edm.Guid"" Nullable=""false"" />
+        <Property Name=""TeamMember"" Type=""Edm.String"" />
+        <Property Name=""TFSID"" Type=""Edm.Int32"" />
+        <Property Name=""TFSTitle"" Type=""Edm.String"" />
         <Property Name=""Comment"" Type=""Edm.String"" />
-        <Property Name=""Area Path"" Type=""Edm.String"" />
-        <Property Name=""Iteration Path"" Type=""Edm.String"" />
-        <Property Name=""Project ID"" Type=""Edm.String"" />
-        <Property Name=""Row ID"" Type=""Edm.Guid"" Nullable=""false"" />
-        <Property Name=""Budget Closed"" Type=""Edm.Boolean"" Nullable=""false"" />
-        <Property Name=""TFS ID"" Type=""Edm.Int32"" />
-        <Property Name=""TFS Title"" Type=""Edm.String"" />
-        <Property Name="" Budget Closed Date"" Type=""Edm.DateTimeOffset"" />
-        <Property Name=""Team Project"" Type=""Edm.String"" />
-        <Property Name=""Duration in Seconds"" Type=""Edm.Double"" Nullable=""false"" />
-        <Property Name=""Activity Type"" Type=""Edm.String"" />
-        <Property Name=""Budget ID"" Type=""Edm.Guid"" />
-        <Property Name=""Budget Hours"" Type=""Edm.Int32"" />
-        <Property Name=""Record Date"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
-        <Property Name=""Is Billable"" Type=""Edm.Boolean"" />
-        <Property Name=""Inherited Budget"" Type=""Edm.Boolean"" />
-        <Property Name=""Parent TFS Title"" Type=""Edm.String"" />
-        <Property Name=""Tracked Time Type"" Type=""Edm.String"" />
-        <Property Name=""Work Item Type"" Type=""Edm.String"" />
+        <Property Name=""RecordDate"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""RecordDateStop"" Type=""Edm.DateTimeOffset"" Nullable=""false"" />
+        <Property Name=""TimeTracked"" Type=""Edm.Double"" Nullable=""false"" />
+        <Property Name=""ActivityType"" Type=""Edm.String"" />
+        <Property Name=""TrackedTimeType"" Type=""Edm.String"" />
+        <Property Name=""WorkItemType"" Type=""Edm.String"" />
+        <Property Name=""TeamProject"" Type=""Edm.String"" />
+        <Property Name=""Effort"" Type=""Edm.Double"" />
+        <Property Name=""StoryPoints"" Type=""Edm.Double"" />
+        <Property Name=""OriginalEstimate"" Type=""Edm.Double"" />
+        <Property Name=""CompletedWork"" Type=""Edm.Double"" />
+        <Property Name=""Budget"" Type=""Edm.String"" />
+        <Property Name=""BudgetID"" Type=""Edm.Guid"" />
+        <Property Name=""InheritedBudget"" Type=""Edm.Boolean"" />
+        <Property Name=""BudgetHours"" Type=""Edm.Int32"" />
+        <Property Name=""BudgetClosed"" Type=""Edm.Boolean"" Nullable=""false"" />
+        <Property Name=""BudgetClosedDate"" Type=""Edm.DateTimeOffset"" />
+        <Property Name=""ProjectID"" Type=""Edm.String"" />
+        <Property Name=""IterationID"" Type=""Edm.Int32"" />
+        <Property Name=""IterationPath"" Type=""Edm.String"" />
+        <Property Name=""AreaPath"" Type=""Edm.String"" />
+        <Property Name=""TopTFSID"" Type=""Edm.Int32"" />
+        <Property Name=""TopTFSTitle"" Type=""Edm.String"" />
+        <Property Name=""TopTFSStoryPoint"" Type=""Edm.Double"" />
+        <Property Name=""ParentTFSID"" Type=""Edm.Int32"" />
+        <Property Name=""ParentTFSTitle"" Type=""Edm.String"" />
+        <Property Name=""ParentTFSStoryPoint"" Type=""Edm.Double"" />
+        <Property Name=""WorkItemState"" Type=""Edm.String"" />
+        <Property Name=""DurationInSeconds"" Type=""Edm.Double"" Nullable=""false"" />
+        <Property Name=""IsBillable"" Type=""Edm.Boolean"" />
+        <Property Name=""BillablePeriodLength"" Type=""Edm.Double"" />
       </EntityType>
     </Schema>
     <Schema Namespace=""Default"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
