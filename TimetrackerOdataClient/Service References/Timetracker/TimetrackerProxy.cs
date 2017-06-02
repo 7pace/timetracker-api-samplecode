@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 30.05.2017 10:23:30
+// Generation date: 02.06.2017 12:40:48
 namespace TimetrackerOnline.BusinessLayer.Models
 {
     /// <summary>
@@ -927,6 +927,29 @@ namespace TimetrackerOnline.BusinessLayer.Models
         partial void OnBillablePeriodLengthChanging(global::System.Nullable<double> value);
         partial void OnBillablePeriodLengthChanged();
         /// <summary>
+        /// There are no comments for Property ApprovalState in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        [global::Microsoft.OData.Client.OriginalNameAttribute("ApprovalState")]
+        public string ApprovalState
+        {
+            get
+            {
+                return this._ApprovalState;
+            }
+            set
+            {
+                this.OnApprovalStateChanging(value);
+                this._ApprovalState = value;
+                this.OnApprovalStateChanged();
+                this.OnPropertyChanged("ApprovalState");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
+        private string _ApprovalState;
+        partial void OnApprovalStateChanging(string value);
+        partial void OnApprovalStateChanged();
+        /// <summary>
         /// This event is raised when the value of the property is changed
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.4.0")]
@@ -1119,6 +1142,7 @@ namespace Default
         <Property Name=""DurationInSeconds"" Type=""Edm.Double"" Nullable=""false"" />
         <Property Name=""IsBillable"" Type=""Edm.Boolean"" />
         <Property Name=""BillablePeriodLength"" Type=""Edm.Double"" />
+        <Property Name=""ApprovalState"" Type=""Edm.String"" />
       </EntityType>
     </Schema>
     <Schema Namespace=""Default"" xmlns=""http://docs.oasis-open.org/odata/ns/edm"">
