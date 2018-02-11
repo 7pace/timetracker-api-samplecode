@@ -16,7 +16,7 @@ namespace TimetrackerOdataClient
         /// On-premise context
         /// </summary>
         /// <param name="serviceUri"></param>
-        public TimetrackerOdataContext ( Uri serviceUri )
+        public TimetrackerOdataContext( Uri serviceUri )
         {
             _serviceUri = serviceUri;
 
@@ -29,16 +29,17 @@ namespace TimetrackerOdataClient
         /// </summary>
         /// <param name="serviceUri"></param>
         /// <param name="token"></param>
-        public TimetrackerOdataContext ( Uri serviceUri, string token )
+        public TimetrackerOdataContext( Uri serviceUri, string token )
         {
             _serviceUri = serviceUri;
             _token = token;
 
             Container = new Default.Container( serviceUri );
+
             Container.SendingRequest2 += SendHeaderAuth;
         }
 
-        private void SendHeaderAuth ( object sender, SendingRequest2EventArgs e )
+        private void SendHeaderAuth( object sender, SendingRequest2EventArgs e )
         {
             e.RequestMessage.SetHeader( "Authorization", "Bearer " + _token );
         }
