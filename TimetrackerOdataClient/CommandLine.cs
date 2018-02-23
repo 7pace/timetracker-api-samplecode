@@ -4,74 +4,32 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommandLine;
+using CommandLine.Text;
 
 namespace TimetrackerOdataClient
 {
-    public class CommandLine
+    public class CommandLineOptions
     {
-        private readonly string[] _args;
+        [Value( 0, Required = true, HelpText = "Service URL for Timetracker OData endpoint (without ?api-version)" )]
+        public Uri ServiceUri { get; set; }
 
-        public CommandLine ( string[] args )
-        {
-            _args = args;
+        [Option( 'x', HelpText = "Export format (if required). Possible values: xml, json. Provide empty string if no export required" )]
+        public string Format { get; set; }
 
-            Init();
-        }
+        [Option( 'w', Default = false, HelpText = "On-premise usage (NTLM auth)" )]
+        public bool IsWindowsAuth { get; set; }
 
-        private void Init ()
-        {
-            if ( _args.Length < 2 || _args.Length > 3 )
-            {
-                Help();
-                return;
-            }
+        [Option( 't', HelpText = "Token for Timetracker API (VSTS usage)" )]
+        public string Token { get; set; }
 
-            // OData service uri
-            try
-            {
-                ServiceUri = new Uri( _args[0] );
-            }
-            catch ( Exception )
-            {
-                Help();
-                return;
-            }
+        [Option( 'a', Default = null, HelpText = "Comma separated list of TFS fields, e.g. System.Tags,System.Title" )]
+        public IEnumerable<string> TfsFields { get; set; }
 
-            // Mode
-            var mode = _args[1];
+        [Option( 'f', HelpText = "TFS URL with collection part" )]
+        public string TfsUrl { get; set; }
 
-            switch ( mode )
-            {
-                case "-t":
-                    // Token
-                    Token = _args[2];
-                    break;
-
-                case "-w":
-                    IsWindowsAuth = true;
-                    break;
-
-                default:
-                    Help();
-                    return;
-            }
-
-            IsParsed = true;
-        }
-
-        public bool IsParsed { get; private set; }
-
-        public Uri ServiceUri { get; private set; }
-
-        public bool IsWindowsAuth { get; private set; }
-
-        public string Token { get; private set; }
-
-        public void Help ()
-        {
-            Console.WriteLine( "--------------------------------------------" );
-            Console.WriteLine( "VSTS usage (token auth): {0} ServiceURI -t Token", System.AppDomain.CurrentDomain.FriendlyName );
-            Console.WriteLine( "On-premise usage (NTLM auth): {0} ServiceURI -w", System.AppDomain.CurrentDomain.FriendlyName );
-        }
+        [Option( 'v', HelpText = "VSTS personal token, when additional fields are provided" )]
+        public string VstsToken { get; set; }
     }
 }
