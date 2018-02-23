@@ -66,6 +66,7 @@ namespace TimetrackerOdataClient
             }
             catch ( Exception e )
             {
+                _cache[id] = fieldValues;
                 //handle errors here
                 Console.WriteLine( "failed getting info for tfs#" + id );
             }

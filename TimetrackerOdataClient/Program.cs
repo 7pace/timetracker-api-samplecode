@@ -42,8 +42,8 @@ namespace TimetrackerOdataClient
                 : new TimetrackerOdataContext( cmd.ServiceUri, cmd.Token );
 
             //TODO: DEFINE DATE PERIOD HERE
-            // Perform query for 3 last days
-            var startDate = DateTime.Today.AddDays( -3 ).ToString( DateParametersFormat );
+            // Perform query for 3 last years
+            var startDate = DateTime.Today.AddYears( -3 ).ToString( DateParametersFormat );
             var endDate = DateTime.Today.ToString( DateParametersFormat );
 
             var timeExport = context.Container.TimeExport( startDate, endDate, null, null, null );
