@@ -13,10 +13,10 @@ Command line parameters:
 
 VSTS usage (token auth): 
 ```
-TimetrackerOdataClient.exe ServiceURI -t Token
+TimetrackerOdataClient.exe ServiceURI -t Token -f VSTS_ACCOUNT_URL -v VSTS_TOKEN -a System.Tags,System.Title -x json
 ```
 
 On-premise usage (NTLM auth):
 ```
-TimetrackerOdataClient.exe ServiceURI -w
+TimetrackerOdataClient.exe ServiceURI -w -f TFS_URL_WITH_COLLECTION -a System.Tags,System.Title -x json
 ```
