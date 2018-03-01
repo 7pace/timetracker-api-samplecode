@@ -62,6 +62,13 @@ namespace TimetrackerOdataClient
 
         public static List<ExtendedTimetrackerRow> ExtendWithAdditionalFields( CommandLineOptions options, ExportItemViewModelApi[] timeExportResult )
         {
+            if ( string.IsNullOrEmpty( options.TfsUrl ) )
+            {
+                return timeExportResult.Select( x => new ExtendedTimetrackerRow
+                {
+                    TimetrackerRow = x
+                } ).ToList();
+            }
             var extender = new TFSExtender( options.TfsUrl, options.VstsToken );
 
             var extendedData = new List<ExtendedTimetrackerRow>();
