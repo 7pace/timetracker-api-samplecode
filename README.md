@@ -20,3 +20,14 @@ On-premise usage (NTLM auth):
 ```
 TimetrackerOdataClient.exe ServiceURI -w -f TFS_URL_WITH_COLLECTION -a System.Tags,System.Title -x json
 ```
+## Parameters
+
+|   | TFS  | VSTS  |
+|---|---|---|
+| ServiceUri  | [timetrackerServiceUrl:Port]/api/[CollectionName]/odata  |  https://[accountName].timehub.7pace.com/api/odata |
+|-f| TFS URL (like http://tfs:8080/tfs)|VSTS Account URL (https://[accountName].visualstudio.com)|
+| -t  | -  | API Token  |
+| -v  | -  | (Optional) VSTS Personal token. Used only when fetching fields from VSTS API that do not included in default list of fields when exporting. |
+| -w  | no value, tells application to use Windows Credentials  | -  |
+|-x|(Optional) Export format. Possible values: xml, json. Provide empty string if no export required|(Optional) Export format. Possible values: xml, json. Provide empty string if no export required|
+|-a| (Optional) Comma separated list of TFS fields, e.g. System.Tags,System.Title|(Optional) Comma separated list of TFS fields, e.g. System.Tags,System.Title|
