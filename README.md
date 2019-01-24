@@ -6,6 +6,11 @@ This repo contains code samples for using the REST API's in Timetracker. The cod
 The OData Connected Service Extension (http://odata.github.io/odata.net/#OData-Client-Code-Generation-Tool) has been used to build this code sample.
 The T4 templates (ServiceReferences\Timetracker\TimetrackerProxy.tt, ServiceReferences\Timetracker\TimetrackerProxy.ttinclude) were modified since the original OData Connected Service Extension does not support spaces in the naming of entity members.
 
+## Exporting Timetracker data into hierarchical Excel
+There is implementation of exporting feature for Timetracker into Excel file with hierarchy of Work Items based on this sample code:
+https://github.com/laugel/timetracker-excel-exporter
+
+
 ## TimetrackerOdataClient usage
 
 This is a sample of the console application which connects to VSTS or On-premise version of Timetracker and returns all time records for last 3 months.
