@@ -1,3 +1,5 @@
+This sample is deprecated because it used our deprecated API v2.1. Now we have a new API v3.0 and a new sample, please go to https://github.com/7pace/timetracker-reporting-api-samplecode
+
 Timetracker REST API Sample Code
 ===================
 
